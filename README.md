@@ -187,5 +187,6 @@ python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_on
 
 之后会打印出测试图片的平均PSNR值并且在"logs/llfftest/renderonly_test_199999"文件内生成测试图片的渲染图像
 
-
+### 如果要自己制作数据集
+你需要[COLMAP](https://demuc.de/colmap/)和[LLFF code](https://github.com/Fyusion/LLFF) ，具体操作可见[https://blog.csdn.net/qq_43575504/article/details/129357568](https://blog.csdn.net/qq_43575504/article/details/129357568)
 
