@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 
 ## 文件存放路径
-我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，fern和bicycle文件夹里存放了logs和data文件夹，testdata文件夹里只有data文件，data文件夹保存了数据集，logs文件夹保存了训练好的模型权重，日志文件和渲染的视频，各个文件夹里所要用到的文件如下所示
+我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，fern，bicycle和testdata文件夹里存放了logs和data文件夹，data文件夹保存了数据集，logs文件夹保存了训练好的模型权重，日志文件和渲染的视频，各个文件夹里所要用到的文件如下所示
 
 ### data
 
@@ -144,12 +144,29 @@ python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc
 
 ### 如果要基于训练好的NeRF渲染环绕物体的视频
 
+注意要放好对应的logs文件
+
+对于fern
+
+```
+python run_nerf.py --config configs/fern.txt --render_only
+```
+
+对于我们的数据集
+```
+python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_only
+```
+
+
+
+### 如果要基于训练好的NeRF在预留的测试图片上评价定量结果
+
+注意要放好testdata的data文件夹和logs文件夹，还需要前往configs文件夹内的llfftest.txt文件修改llffhold为1
+
 
 ```
 python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_only --render_test
 ```
-
-
 
 
 
