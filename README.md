@@ -15,6 +15,7 @@
 数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频
 
 ## 准备
+首先将
 
 ```
 git clone https://github.com/yenchenlin/nerf-pytorch.git
@@ -34,48 +35,6 @@ pip install -r requirements.txt
   - configargparse
   
 The LLFF data loader requires ImageMagick.
-
-
-- data
-  - fashion
-- download_use_data.py
-- easy_train.py
-- find_best_model.py
-- function1.py
-- model1.py
-- plot_loss_accuracy.py
-- test1.py
-- visualization_parameters.py
-- result
-  - best_model
-    - model.npy
-    - trainloss.json
-    - val_accuracy.json
-    - validlosses.json
-    - learningrates.json
-  - easy_train_model
-    - model.npy
-    - trainloss.json
-    - val_accuracy.json
-    - validlosses.json
-    - learningrates.json
-  - pictures
-    - find_best_learning_rate.png
-    - find_best_regularization_parameter.png
-    - find_hidden0_accuracy.png
-    - find_hidden1_accuracy.png
-    - test_accuracy.png
-    - trainloss.png
-    - validloss.png
-    - learningrates.png
-    - orign.png
-    - layer1_biases_histogram.png
-    - layer1_weights_histogram.png
-    - layer1_weights_visualization.png
-    - layer2_biases_histogram.png
-    - layer2_weights_histogram.png
-    - layer3_biases_histogram.png
-    - layer3_weights_histogram.png
 
 
 
@@ -163,52 +122,4 @@ You can download the pre-trained models [here](https://drive.google.com/drive/fo
 │   ├── trex_test    # downloaded logs
 ```
 
-### Reproducibility 
 
-Tests that ensure the results of all functions and training loop match the official implentation are contained in a different branch `reproduce`. One can check it out and run the tests:
-```
-git checkout reproduce
-py.test
-```
-
-## Method
-
-[NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](http://tancik.com/nerf)  
- [Ben Mildenhall](https://people.eecs.berkeley.edu/~bmild/)\*<sup>1</sup>,
- [Pratul P. Srinivasan](https://people.eecs.berkeley.edu/~pratul/)\*<sup>1</sup>,
- [Matthew Tancik](http://tancik.com/)\*<sup>1</sup>,
- [Jonathan T. Barron](http://jonbarron.info/)<sup>2</sup>,
- [Ravi Ramamoorthi](http://cseweb.ucsd.edu/~ravir/)<sup>3</sup>,
- [Ren Ng](https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html)<sup>1</sup> <br>
- <sup>1</sup>UC Berkeley, <sup>2</sup>Google Research, <sup>3</sup>UC San Diego  
-  \*denotes equal contribution  
-  
-<img src='imgs/pipeline.jpg'/>
-
-> A neural radiance field is a simple fully connected network (weights are ~5MB) trained to reproduce input views of a single scene using a rendering loss. The network directly maps from spatial location and viewing direction (5D input) to color and opacity (4D output), acting as the "volume" so we can use volume rendering to differentiably render new views
-
-
-## Citation
-Kudos to the authors for their amazing results:
-```
-@misc{mildenhall2020nerf,
-    title={NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis},
-    author={Ben Mildenhall and Pratul P. Srinivasan and Matthew Tancik and Jonathan T. Barron and Ravi Ramamoorthi and Ren Ng},
-    year={2020},
-    eprint={2003.08934},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
-}
-```
-
-However, if you find this implementation or pre-trained models helpful, please consider to cite:
-```
-@misc{lin2020nerfpytorch,
-  title={NeRF-pytorch},
-  author={Yen-Chen, Lin},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished={\url{https://github.com/yenchenlin/nerf-pytorch/}},
-  year={2020}
-}
-```
