@@ -12,9 +12,9 @@
 
 ![bicycle1](https://github.com/duolaCmengaa/5/assets/145974277/d9cf1779-b3ea-408e-830a-79c922681c98)
 
- 数据集可以前往[Dataset](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载
+数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频
 
-## Installation
+## 准备
 
 ```
 git clone https://github.com/yenchenlin/nerf-pytorch.git
