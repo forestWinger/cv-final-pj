@@ -15,11 +15,11 @@
 数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频
 
 ## 准备
-首先将
+首先下载好本仓库的所有文件
 
 ```
-git clone https://github.com/yenchenlin/nerf-pytorch.git
-cd nerf-pytorch
+git clone https://github.com/duolaCmengaa/5.git
+cd 5
 pip install -r requirements.txt
 ```
 
