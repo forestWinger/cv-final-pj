@@ -1,7 +1,9 @@
 # 基于NeRF的物体重建和新视图合成
 
 基本要求：
+
 （1） 选取身边的物体拍摄多角度图片/视频，并使用COLMAP估计相机参数，随后使用现成的框架进行训练；
+
 （2） 基于训练好的NeRF渲染环绕物体的视频，并在预留的测试图片上评价定量结果。
 
 本项目是基于NeRF官方[NeRF](http://www.matthewtancik.com/nerf)和开源代码:[NeRF-pytorch](https://github.com/yenchenlin/nerf-pytorch)来实现的
@@ -12,7 +14,7 @@
 
 ![bicycle1](https://github.com/duolaCmengaa/5/assets/145974277/d9cf1779-b3ea-408e-830a-79c922681c98)
 
-数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频
+
 
 ## 准备
 首先下载好本仓库的所有文件
@@ -39,13 +41,32 @@ The LLFF data loader requires ImageMagick.
 
 
 
-You will also need the [LLFF code](http://github.com/fyusion/llff) (and COLMAP) set up to compute poses if you want to run on your own real data.
-  
 </details>
 
-## How To Run?
 
-### Quick Start
+
+### 文件存放路径
+我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频，fern文件夹里存放了logs和data文件夹，各个文件夹里的文件如下所示
+
+####data
+
+```
+├── configs                                                                                                       
+│   ├── ...                                                                                     
+│                                                                                               
+├── data                                                                                                                                                                                                       
+│   ├── nerf_llff_data                                                                                                  
+│   │   └── fern                                                                                                                             
+│   │   └── flower  # downloaded llff dataset                                                                                  
+│   │   └── horns   # downloaded llff dataset
+|   |   └── ...
+|   ├── nerf_synthetic
+|   |   └── lego
+|   |   └── ship    # downloaded synthetic dataset
+|   |   └── ...
+```
+
+
 
 Download data for two example datasets: `lego` and `fern`
 ```
@@ -122,4 +143,5 @@ You can download the pre-trained models [here](https://drive.google.com/drive/fo
 │   ├── trex_test    # downloaded logs
 ```
 
+You will also need the [LLFF code](http://github.com/fyusion/llff) (and COLMAP) set up to compute poses if you want to run on your own real data.
 
