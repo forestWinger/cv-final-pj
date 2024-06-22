@@ -29,7 +29,7 @@ pip install -r requirements.txt
   <summary> Dependencies (click to expand) </summary>
   
   ## Dependencies
-  - PyTorch 1.4
+  - PyTorch 
   - matplotlib
   - numpy
   - imageio
@@ -144,7 +144,6 @@ python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc
 
 ### 如果要基于训练好的NeRF渲染环绕物体的视频
 
-因为是360°旋转，所以命令稍有不同
 
 ```
 python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_only --render_test
