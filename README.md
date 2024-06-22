@@ -136,7 +136,7 @@ pip install -r requirements.txt
 
 ### 如果要从零开始训练fern数据集
 
-放好对应的data文件夹后运行
+放好fern文件夹内的data文件夹后运行
 
 ```
 python run_nerf.py --config configs/fern.txt
@@ -147,6 +147,8 @@ python run_nerf.py --config configs/fern.txt
 渲染的视频文件将被保存至logs文件内，如果要修改batch size，只需前往configs文件夹内的对应的txt(fern数据集对应fern.txt，llfftest数据集对应llfftest.txt)文件修改N_rand即可
 
 ### 如果要从零开始训练我们的数据集
+
+放好bicycle文件夹内的data文件夹后运行
 
 因为是360°旋转，所以命令稍有不同
 
@@ -164,11 +166,14 @@ python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc
 python run_nerf.py --config configs/fern.txt --render_only
 ```
 
+之后会在"logs/fern_test/renderonly_path_199999"生成渲染后的视频
+
 对于我们的数据集
 ```
 python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_only
 ```
-之后会在代码所在目录生成渲染后的视频
+
+之后会在"logs/llfftest/renderonly_path_199999"生成渲染后的视频
 
 
 ### 如果要基于训练好的NeRF在预留的测试图片上评价定量结果
