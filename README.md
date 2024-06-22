@@ -106,36 +106,23 @@ The LLFF data loader requires ImageMagick.
                                                                                       
 ├── configs                                                                                                                                                                                    │   └── fern.txt
 │   └── llfftest.txt       
-│   ├── data
-│   │   └── ...
-│   ├── logs
-│   │   └── ...
-
-│   │   └── testset_200000 "测试用的图片"
-│   │   │   └──img01.jpg
-│   │   │   └──img02.jpg
-logs
-│   │   └── 050000.tar
-│   │   └── 100000.tar
-│   │   └── 150000.tar
-│   │   └── 200000.tar "迭代200000步的模型权重
-│   │   └── args.txt
-│   │   └── config.txt
-│   │   └── llfftest_spiral_200000_rgb.mp4 "最终渲染出的视频"
-│   ├── summaries                                                                                                
-│   │   └── fern_test/llfftest
-│   │   │   │   └── events.out.tfevents.1718818883.c32264eda658.369162.0 "Tensorboard日志文件"                                                                                                                        
+├── data
+│   └── ...
+├── logs "当需要从预训练的模型开始训练或者对预留的测试图片进行测试才需要此文件，否则请不要放置此文件"
+│   └── ...
+├── images_8.py "八倍下采样"
+├── load_blender.py
+├── load_LINEMOD.py
+├── load_deepvoxels.py
+├── load_llff.py
+├── names.py
+├── requirements.txt
+├── run_nerf.py
+├── run_nerf_helpers.py
 
 ```
 
 
-
-
-
-Download data for two example datasets: `lego` and `fern`
-```
-bash download_example_data.sh
-```
 
 To train a low-res `lego` NeRF:
 ```
