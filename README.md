@@ -185,7 +185,7 @@ python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_on
 python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_only --render_test
 ```
 
-之后会打印出测试图片的平均PSNR值并且在"logs/llfftest/renderonly_test_199999"文件内生成用于测试图片的渲染图像
+之后会打印出测试图片的平均PSNR值并且在"logs/llfftest/renderonly_test_199999"文件内生成测试图片的渲染图像
 
 
 
