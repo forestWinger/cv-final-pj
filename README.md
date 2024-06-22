@@ -156,7 +156,7 @@ python run_nerf.py --config configs/fern.txt --render_only
 ```
 python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_only
 ```
-
+之后会在代码所在目录生成渲染后的视频
 
 
 ### 如果要基于训练好的NeRF在预留的测试图片上评价定量结果
@@ -168,6 +168,7 @@ python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_on
 python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_only --render_test
 ```
 
+之后会打印出测试图片的平均PSNR值并且在"logs/llfftest/renderonly_test_199999"文件内生成用于测试图片的渲染图像
 
 
 
