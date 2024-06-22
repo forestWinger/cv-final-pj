@@ -38,17 +38,17 @@ pip install -r requirements.txt
   - ImageMagick
 
   ## Experimental environment
-  pytorch == 2.3.0
-  pytorch-cuda == 12.1
-  torchvision == 0.18.0
-  imageio == 2.34.1
-  imageio-ffmpeg == 0.5.1
-  matplotlib == 3.7.5
-  configargparse == 1.7
-  tensorboard == 2.14.0
-  tqdm == 4.66.4
-  opencv-python == 4.10.0.84 
-  numpy == 1.24.3
+  - pytorch == 2.3.0
+  - pytorch-cuda == 12.1
+  - torchvision == 0.18.0
+  - imageio == 2.34.1
+  - imageio-ffmpeg == 0.5.1
+  - matplotlib == 3.7.5
+  - configargparse == 1.7
+  - tensorboard == 2.14.0
+  - tqdm == 4.66.4
+  - opencv-python == 4.10.0.84 
+  - numpy == 1.24.3
 
 </details>
 
