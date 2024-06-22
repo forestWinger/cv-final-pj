@@ -35,6 +35,51 @@ pip install -r requirements.txt
   
 The LLFF data loader requires ImageMagick.
 
+
+- data
+  - fashion
+- download_use_data.py
+- easy_train.py
+- find_best_model.py
+- function1.py
+- model1.py
+- plot_loss_accuracy.py
+- test1.py
+- visualization_parameters.py
+- result
+  - best_model
+    - model.npy
+    - trainloss.json
+    - val_accuracy.json
+    - validlosses.json
+    - learningrates.json
+  - easy_train_model
+    - model.npy
+    - trainloss.json
+    - val_accuracy.json
+    - validlosses.json
+    - learningrates.json
+  - pictures
+    - find_best_learning_rate.png
+    - find_best_regularization_parameter.png
+    - find_hidden0_accuracy.png
+    - find_hidden1_accuracy.png
+    - test_accuracy.png
+    - trainloss.png
+    - validloss.png
+    - learningrates.png
+    - orign.png
+    - layer1_biases_histogram.png
+    - layer1_weights_histogram.png
+    - layer1_weights_visualization.png
+    - layer2_biases_histogram.png
+    - layer2_weights_histogram.png
+    - layer3_biases_histogram.png
+    - layer3_weights_histogram.png
+
+
+
+
 You will also need the [LLFF code](http://github.com/fyusion/llff) (and COLMAP) set up to compute poses if you want to run on your own real data.
   
 </details>
