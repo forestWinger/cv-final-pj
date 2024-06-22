@@ -48,7 +48,7 @@ The LLFF data loader requires ImageMagick.
 ### 文件存放路径
 我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频，fern文件夹里存放了logs和data文件夹，各个文件夹里的文件如下所示
 
-####data
+#### data
 
 ```
 ├── configs                                                                                                       
