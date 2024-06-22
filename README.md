@@ -51,19 +51,31 @@ The LLFF data loader requires ImageMagick.
 #### data
 
 ```
-├── configs                                                                                                       
-│   ├── ...                                                                                     
-│                                                                                               
-├── data                                                                                                                                                                                                       
+                                                                                      
+├── data                                                                                                                                                                                               
 │   ├── nerf_llff_data                                                                                                  
-│   │   └── fern                                                                                                                             
-│   │   └── flower  # downloaded llff dataset                                                                                  
-│   │   └── horns   # downloaded llff dataset
-|   |   └── ...
-|   ├── nerf_synthetic
-|   |   └── lego
-|   |   └── ship    # downloaded synthetic dataset
-|   |   └── ...
+│   │   └── fern/llfftest                                                                                                                             
+│   │   │   └──images   
+│   │   │   │   └──img01.jpg
+│   │   │   │   └──img02.jpg
+│   │   │   │   └── ...
+│   │   │   └──images_4 "四倍下采样"
+│   │   │   │   └──img01.jpg
+│   │   │   │   └──img02.jpg
+│   │   │   │   └── ...
+│   │   │   └──images_8 "八倍下采样"
+│   │   │   │   └──img01.jpg
+│   │   │   │   └──img02.jpg
+│   │   │   │   └── ...
+│   │   │   └──sparse
+│   │   │   │   └──0
+│   │   │   │   │   └──cameras.bin
+│   │   │   │   │   └──images.bin
+│   │   │   │   │   └──points3D.bin
+│   │   │   │   │   └──project.ini
+│   │   │   └──database.db 
+│   │   │   └──poses_bounds.npy
+│   │   │   └──view_imgs.txt "所使用的图片"  
 ```
 
 
