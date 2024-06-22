@@ -168,6 +168,7 @@ python run_nerf.py --config configs/fern.txt --render_only
 
 之后会在"logs/fern_test/renderonly_path_199999"生成渲染后的视频
 
+
 对于我们的数据集
 ```
 python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc --render_only
