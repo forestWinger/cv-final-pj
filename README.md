@@ -17,7 +17,7 @@
 
 
 ## 准备
-首先下载好本仓库的所有文件
+首先下载好本仓库的所有文件，并配置好环境
 
 ```
 git clone https://github.com/duolaCmengaa/5.git
@@ -45,10 +45,10 @@ The LLFF data loader requires ImageMagick.
 
 
 
-### 文件存放路径
+## 文件存放路径
 我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频，fern和bicycle文件夹里存放了logs和data文件夹，testdata文件夹里只有data文件，各个文件夹里所要用到的文件如下所示
 
-#### data
+### data
 
 ```
                                                                                       
@@ -75,10 +75,10 @@ The LLFF data loader requires ImageMagick.
 │   │   │   │   │   └──project.ini
 │   │   │   └──database.db 
 │   │   │   └──poses_bounds.npy
-│   │   │   └──view_imgs.txt "所使用的图片"  
+│   │   │   └──view_imgs.txt "所使用的图片的记录"  
 ```
 
-#### logs
+### logs
 
 ```
                                                                                       
@@ -115,11 +115,30 @@ The LLFF data loader requires ImageMagick.
 ├── load_LINEMOD.py
 ├── load_deepvoxels.py
 ├── load_llff.py
-├── names.py
+├── names.py "批量命名图片"
 ├── requirements.txt
 ├── run_nerf.py
 ├── run_nerf_helpers.py
 
+```
+
+## 训练
+
+将所有所需要的文件按照正确的路径放置后，即可开始训练
+
+### 如果要从零开始训练fern数据集，
+
+```
+python run_nerf.py --config configs/fern.txt
+```
+
+如果要从预训练好的模型权重开始继续训练只需将logs文件正确放置，运行相同的命令即可从迭代步数最大的模型权重继续开始训练，训练前记得修改run_nerf.py内的N_iters参数
+
+### 如果要从零开始训练我们的数据集，
+
+因为是360°旋转，所以命令稍有不同
+```
+python run_nerf.py --config configs/llfftest.txt --spherify --no_ndc
 ```
 
 
