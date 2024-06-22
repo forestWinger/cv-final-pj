@@ -46,7 +46,7 @@ The LLFF data loader requires ImageMagick.
 
 
 ### 文件存放路径
-我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频，fern文件夹里存放了logs和data文件夹，各个文件夹里的文件如下所示
+我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频，fern和bicycle文件夹里存放了logs和data文件夹，testdata文件夹里只有data文件，各个文件夹里所要用到的文件如下所示
 
 #### data
 
@@ -77,6 +77,58 @@ The LLFF data loader requires ImageMagick.
 │   │   │   └──poses_bounds.npy
 │   │   │   └──view_imgs.txt "所使用的图片"  
 ```
+
+#### logs
+
+```
+                                                                                      
+├── logs                                                                                                                                                                                               
+│   ├── fern_test/llfftest 
+│   │   └── testset_200000 "测试用的图片"
+│   │   │   └──img01.jpg
+│   │   │   └──img02.jpg
+│   │   └── 050000.tar
+│   │   └── 100000.tar
+│   │   └── 150000.tar
+│   │   └── 200000.tar "迭代200000步的模型权重
+│   │   └── args.txt
+│   │   └── config.txt
+│   │   └── llfftest_spiral_200000_rgb.mp4 "最终渲染出的视频"
+│   ├── summaries                                                                                                
+│   │   └── fern_test/llfftest
+│   │   │   │   └── events.out.tfevents.1718818883.c32264eda658.369162.0 "Tensorboard日志文件"                                                                                                                        
+
+```
+
+#### 全局文件存放路径
+
+```
+                                                                                      
+├── configs                                                                                                                                                                                    │   └── fern.txt
+│   └── llfftest.txt       
+│   ├── data
+│   │   └── ...
+│   ├── logs
+│   │   └── ...
+
+│   │   └── testset_200000 "测试用的图片"
+│   │   │   └──img01.jpg
+│   │   │   └──img02.jpg
+logs
+│   │   └── 050000.tar
+│   │   └── 100000.tar
+│   │   └── 150000.tar
+│   │   └── 200000.tar "迭代200000步的模型权重
+│   │   └── args.txt
+│   │   └── config.txt
+│   │   └── llfftest_spiral_200000_rgb.mp4 "最终渲染出的视频"
+│   ├── summaries                                                                                                
+│   │   └── fern_test/llfftest
+│   │   │   │   └── events.out.tfevents.1718818883.c32264eda658.369162.0 "Tensorboard日志文件"                                                                                                                        
+
+```
+
+
 
 
 
