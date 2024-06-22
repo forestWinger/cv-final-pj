@@ -6,7 +6,7 @@
 
 本项目是基于NeRF官方[NeRF](http://www.matthewtancik.com/nerf)和开源代码:[NeRF-pytorch](https://github.com/yenchenlin/nerf-pytorch)来实现的
 
-以下是我们基于训练好的NeRF渲染环绕物体的视频，示例如下
+我们渲染了两个数据集，一个是NeRF官方提供的数据集，另外一个是我们自己拍摄的共享单车的照片。以下是我们基于训练好的NeRF渲染环绕物体的视频，示例如下
 
 ![fern](https://github.com/duolaCmengaa/5/assets/145974277/9ac8e55e-9a1d-493b-adc6-61481bd89280)
 
