@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 
 ## 文件存放路径
-我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，其中还保存了训练好的模型权重和渲染的视频，fern和bicycle文件夹里存放了logs和data文件夹，testdata文件夹里只有data文件，各个文件夹里所要用到的文件如下所示
+我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，fern和bicycle文件夹里存放了logs和data文件夹，testdata文件夹里只有data文件，data文件夹保存了数据集，logs文件夹保存了训练好的模型权重，日志文件和渲染的视频，各个文件夹里所要用到的文件如下所示
 
 ### data
 
