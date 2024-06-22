@@ -12,7 +12,7 @@
 
 ![bicycle1](https://github.com/duolaCmengaa/5/assets/145974277/d9cf1779-b3ea-408e-830a-79c922681c98)
 
-This project is a faithful PyTorch implementation of [NeRF](http://www.matthewtancik.com/nerf) that **reproduces** the results while running **1.3 times faster**. The code is based on authors' Tensorflow implementation [here](https://github.com/bmild/nerf), and has been tested to match it numerically. 
+ 
 
 ## Installation
 
