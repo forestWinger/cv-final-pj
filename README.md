@@ -40,7 +40,18 @@ pip install -r requirements.txt
 
 </details>
 
-
+  ## Experimental environment
+  - pytorch == 2.3.0
+  - pytorch-cuda == 12.1
+  - torchvision == 0.18.0
+  - imageio == 2.34.1
+  - imageio-ffmpeg == 0.5.1
+  - matplotlib == 3.7.5
+  - configargparse == 1.7
+  - tensorboard == 2.14.0
+  - tqdm == 4.66.4
+  - opencv-python == 4.10.0.84 
+  - numpy == 1.24.3
 
 ## 文件存放路径
 我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，fern，bicycle和testdata文件夹里存放了logs和data文件夹，data文件夹保存了数据集，logs文件夹保存了训练好的模型权重，日志文件和渲染的视频，各个文件夹里所要用到的文件如下所示
